@@ -1,0 +1,239 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E06E1D4813CAE56E00BF883B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06E1D4713CAE56E00BF883B /* CoreFoundation.framework */; };
+		E06E1D4E13CAE56E00BF883B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E06E1D4C13CAE56E00BF883B /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E06E1D4413CAE56E00BF883B /* Clock.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clock.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E06E1D4713CAE56E00BF883B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E06E1D4B13CAE56E00BF883B /* Clock-Info.plist */ = {isa = PBXFileReference; path = "Clock-Info.plist"; sourceTree = "<group>"; };
+		E06E1D4D13CAE56E00BF883B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E06E1D4F13CAE56E00BF883B /* Clock-Prefix.pch */ = {isa = PBXFileReference; path = "Clock-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E06E1D4113CAE56E00BF883B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E06E1D4813CAE56E00BF883B /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E06E1D3913CAE56D00BF883B = {
+			isa = PBXGroup;
+			children = (
+				E06E1D4913CAE56E00BF883B /* Clock */,
+				E06E1D4613CAE56E00BF883B /* Frameworks */,
+				E06E1D4513CAE56E00BF883B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E06E1D4513CAE56E00BF883B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E06E1D4413CAE56E00BF883B /* Clock.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E06E1D4613CAE56E00BF883B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E06E1D4713CAE56E00BF883B /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E06E1D4913CAE56E00BF883B /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				E06E1D4A13CAE56E00BF883B /* Supporting Files */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		E06E1D4A13CAE56E00BF883B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E06E1D4B13CAE56E00BF883B /* Clock-Info.plist */,
+				E06E1D4C13CAE56E00BF883B /* InfoPlist.strings */,
+				E06E1D4F13CAE56E00BF883B /* Clock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E06E1D4313CAE56E00BF883B /* Clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E06E1D5213CAE56E00BF883B /* Build configuration list for PBXNativeTarget "Clock" */;
+			buildPhases = (
+				E06E1D4013CAE56E00BF883B /* Sources */,
+				E06E1D4113CAE56E00BF883B /* Frameworks */,
+				E06E1D4213CAE56E00BF883B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clock;
+			productName = Clock;
+			productReference = E06E1D4413CAE56E00BF883B /* Clock.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E06E1D3B13CAE56D00BF883B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E06E1D3E13CAE56D00BF883B /* Build configuration list for PBXProject "Clock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E06E1D3913CAE56D00BF883B;
+			productRefGroup = E06E1D4513CAE56E00BF883B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E06E1D4313CAE56E00BF883B /* Clock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E06E1D4213CAE56E00BF883B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E06E1D4E13CAE56E00BF883B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E06E1D4013CAE56E00BF883B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E06E1D4C13CAE56E00BF883B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E06E1D4D13CAE56E00BF883B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E06E1D5013CAE56E00BF883B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E06E1D5113CAE56E00BF883B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E06E1D5313CAE56E00BF883B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
+				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		E06E1D5413CAE56E00BF883B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
+				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E06E1D3E13CAE56D00BF883B /* Build configuration list for PBXProject "Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E06E1D5013CAE56E00BF883B /* Debug */,
+				E06E1D5113CAE56E00BF883B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E06E1D5213CAE56E00BF883B /* Build configuration list for PBXNativeTarget "Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E06E1D5313CAE56E00BF883B /* Debug */,
+				E06E1D5413CAE56E00BF883B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E06E1D3B13CAE56D00BF883B /* Project object */;
+}
