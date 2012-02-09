@@ -26,11 +26,11 @@
     CGContextSetShouldSmoothFonts([[NSGraphicsContext currentContext] graphicsPort], false);
     
     // Get the font right
-    NSFont *font = [NSFont menuBarFontOfSize:14];
+    NSFont *font = [NSFont menuBarFontOfSize: 14];
     NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys: font, NSFontAttributeName, color, NSForegroundColorAttributeName, nil];
     
     // Draw
-    NSRect smallerRect = NSMakeRect(1, 0, rect.size.width-1, rect.size.height-1 );
+    NSRect smallerRect = NSMakeRect(1, 0, rect.size.width-1, rect.size.height-1);
     [text drawInRect:smallerRect withAttributes:attr];
 }
 
