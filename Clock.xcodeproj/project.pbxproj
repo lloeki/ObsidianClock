@@ -7,16 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E06E1D4813CAE56E00BF883B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06E1D4713CAE56E00BF883B /* CoreFoundation.framework */; };
 		E06E1D4E13CAE56E00BF883B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E06E1D4C13CAE56E00BF883B /* InfoPlist.strings */; };
+		E06E1D5713CAE7F500BF883B /* ClockMenuExtraView.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E1D5613CAE7F500BF883B /* ClockMenuExtraView.m */; };
+		E06E1D5C13CAEA2F00BF883B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06E1D5B13CAEA2F00BF883B /* Cocoa.framework */; };
+		E06E1D5F13CAEA8200BF883B /* SystemUIPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06E1D5E13CAEA8200BF883B /* SystemUIPlugin.framework */; };
+		E06E1D6613CAEB7900BF883B /* ClockMenuExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E1D6513CAEB7900BF883B /* ClockMenuExtra.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E06E1D4413CAE56E00BF883B /* Clock.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clock.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E06E1D4413CAE56E00BF883B /* Clock.menu */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clock.menu; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06E1D4713CAE56E00BF883B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		E06E1D4B13CAE56E00BF883B /* Clock-Info.plist */ = {isa = PBXFileReference; path = "Clock-Info.plist"; sourceTree = "<group>"; };
+		E06E1D4B13CAE56E00BF883B /* Clock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Clock-Info.plist"; sourceTree = "<group>"; };
 		E06E1D4D13CAE56E00BF883B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E06E1D4F13CAE56E00BF883B /* Clock-Prefix.pch */ = {isa = PBXFileReference; path = "Clock-Prefix.pch"; sourceTree = "<group>"; };
+		E06E1D4F13CAE56E00BF883B /* Clock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clock-Prefix.pch"; sourceTree = "<group>"; };
+		E06E1D5513CAE7F500BF883B /* ClockMenuExtraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockMenuExtraView.h; sourceTree = "<group>"; };
+		E06E1D5613CAE7F500BF883B /* ClockMenuExtraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockMenuExtraView.m; sourceTree = "<group>"; };
+		E06E1D5913CAE8D700BF883B /* NSMenuExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMenuExtra.h; sourceTree = "<group>"; };
+		E06E1D5A13CAE8F700BF883B /* NSMenuExtraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMenuExtraView.h; sourceTree = "<group>"; };
+		E06E1D5B13CAEA2F00BF883B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E06E1D5E13CAEA8200BF883B /* SystemUIPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemUIPlugin.framework; path = ../../../../System/Library/PrivateFrameworks/SystemUIPlugin.framework; sourceTree = "<group>"; };
+		E06E1D6013CAEAD100BF883B /* SystemUIPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemUIPlugin.framework; path = ../../../../System/Library/PrivateFrameworks/SystemUIPlugin.framework; sourceTree = "<group>"; };
+		E06E1D6213CAEAE000BF883B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E06E1D6413CAEB7900BF883B /* ClockMenuExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockMenuExtra.h; sourceTree = "<group>"; };
+		E06E1D6513CAEB7900BF883B /* ClockMenuExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockMenuExtra.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E06E1D4813CAE56E00BF883B /* CoreFoundation.framework in Frameworks */,
+				E06E1D5F13CAEA8200BF883B /* SystemUIPlugin.framework in Frameworks */,
+				E06E1D5C13CAEA2F00BF883B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +48,9 @@
 		E06E1D3913CAE56D00BF883B = {
 			isa = PBXGroup;
 			children = (
+				E06E1D5E13CAEA8200BF883B /* SystemUIPlugin.framework */,
+				E06E1D5B13CAEA2F00BF883B /* Cocoa.framework */,
+				E06E1D5813CAE87E00BF883B /* MenuExtra */,
 				E06E1D4913CAE56E00BF883B /* Clock */,
 				E06E1D4613CAE56E00BF883B /* Frameworks */,
 				E06E1D4513CAE56E00BF883B /* Products */,
@@ -43,7 +60,7 @@
 		E06E1D4513CAE56E00BF883B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E06E1D4413CAE56E00BF883B /* Clock.bundle */,
+				E06E1D4413CAE56E00BF883B /* Clock.menu */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +68,8 @@
 		E06E1D4613CAE56E00BF883B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E06E1D6213CAEAE000BF883B /* Cocoa.framework */,
+				E06E1D6013CAEAD100BF883B /* SystemUIPlugin.framework */,
 				E06E1D4713CAE56E00BF883B /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -60,6 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				E06E1D4A13CAE56E00BF883B /* Supporting Files */,
+				E06E1D5513CAE7F500BF883B /* ClockMenuExtraView.h */,
+				E06E1D5613CAE7F500BF883B /* ClockMenuExtraView.m */,
+				E06E1D6413CAEB7900BF883B /* ClockMenuExtra.h */,
+				E06E1D6513CAEB7900BF883B /* ClockMenuExtra.m */,
 			);
 			path = Clock;
 			sourceTree = "<group>";
@@ -72,6 +95,15 @@
 				E06E1D4F13CAE56E00BF883B /* Clock-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E06E1D5813CAE87E00BF883B /* MenuExtra */ = {
+			isa = PBXGroup;
+			children = (
+				E06E1D5913CAE8D700BF883B /* NSMenuExtra.h */,
+				E06E1D5A13CAE8F700BF883B /* NSMenuExtraView.h */,
+			);
+			name = MenuExtra;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,7 +123,7 @@
 			);
 			name = Clock;
 			productName = Clock;
-			productReference = E06E1D4413CAE56E00BF883B /* Clock.bundle */;
+			productReference = E06E1D4413CAE56E00BF883B /* Clock.menu */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -132,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06E1D5713CAE7F500BF883B /* ClockMenuExtraView.m in Sources */,
+				E06E1D6613CAEB7900BF883B /* ClockMenuExtra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +220,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -193,7 +231,7 @@
 				INFOPLIST_FILE = "Clock/Clock-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = menu;
 			};
 			name = Debug;
 		};
@@ -203,13 +241,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
 				INFOPLIST_FILE = "Clock/Clock-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = menu;
 			};
 			name = Release;
 		};

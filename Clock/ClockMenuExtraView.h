@@ -1,17 +1,18 @@
 //
-//  MyClass.h
-//  Clock
+//  SampleMenuExtraView.h
+//  MenuExtra
 //
-//  Created by Loic Nageleisen on 11/07/2011.
+//  Created by Loic Nageleisen on 07/01/2011.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
+#import "NSMenuExtra.h"
+#import "NSMenuExtraView.h"
 
 
-@interface MyClass : NSObject {
-@private
-    
+@interface ClockMenuExtraView : NSMenuExtraView {
+    NSString *text;
 }
-
+@property(readwrite, copy) NSString* text;
 @end

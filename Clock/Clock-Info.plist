@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>lloeki.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.lnageleisen.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -42,5 +42,7 @@
 	<string></string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2011 __MyCompanyName__. All rights reserved.</string>
+	<key>NSPrincipalClass</key>
+	<string>ClockMenuExtra</string>
 </dict>
 </plist>
