@@ -16,9 +16,13 @@
     NSMenu *theMenu;
     NSMenuItem *theClockMenuItem;
     NSTimer *theTimer;
+    NSTimeInterval refreshInterval;
+    NSDateFormatter *menuBarFormatter;
+    NSDateFormatter *menuItemFormatter;
 }
 
-- (void)nextTimer;
+- (void)setTimer;
+- (void)setFormats;
 - (void)refreshClock:(NSTimer*)timer;
 
 @end
