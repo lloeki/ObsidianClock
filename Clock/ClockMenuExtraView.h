@@ -13,6 +13,9 @@
 
 @interface ClockMenuExtraView : NSMenuExtraView {
     NSString *text;
+    NSFont *font;
 }
 @property(readwrite, copy) NSString* text;
+-(void)setFont;
+-(double)computeLength;
 @end

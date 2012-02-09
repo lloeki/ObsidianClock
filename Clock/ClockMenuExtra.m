@@ -18,13 +18,14 @@
     if (self == nil)
         return nil;
     
-    // seems about nice for...
-    [self setLength: 76]; // EEE HH:mm
+    // seems about nice
+    [self setLength: 75];
     
     // create and set the MenuExtraView
     theView = [[ClockMenuExtraView alloc] initWithFrame: [[self view] frame]
                                           menuExtra:     self];
     [self setView: theView];
+    [theView setFont];
     
     // build the menu
     theMenu = [[NSMenu alloc] initWithTitle: @"Clock"];
@@ -43,7 +44,7 @@
     
     // refresh now, then every once in a while
     [self refreshClock: nil];
-    refreshInterval = 15;
+    refreshInterval = 1;
     [self setTimer];
     
     return self;
@@ -85,6 +86,7 @@
 - (void)refreshClock:(NSTimer*)timer
 {    
     NSDate *now = [NSDate date];
+    [self setLength: [theView computeLength]];
     
     [theView setText: [menuBarFormatter stringFromDate: now]];
     [theClockMenuItem setTitle:[menuItemFormatter stringFromDate: now]];

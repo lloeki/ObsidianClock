@@ -15,25 +15,43 @@
 
 - (void)drawRect:(NSRect)rect
 {
-    NSColor *color;
+    NSColor *textColor;
+    //NSColor *color;
     if([_menuExtra isMenuDown]) {
-        color = [NSColor selectedMenuItemTextColor];
+        textColor = [NSColor selectedMenuItemTextColor];
+        //color = [NSColor selectedMenuItemColor];
     } else {
-        color =  [NSColor lightGrayColor];
+        textColor =  [NSColor lightGrayColor];
+        //color = [NSColor blackColor];
     }
     
     // Disable LCD subpixel smoothing
     CGContextSetShouldSmoothFonts([[NSGraphicsContext currentContext] graphicsPort], false);
     
-    // Get the font right
-    NSFont *font = [NSFont menuBarFontOfSize: 14];
-    font = [[NSFontManager sharedFontManager] convertFont:font toHaveTrait:NSBoldFontMask];
+    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys: font, NSFontAttributeName,
+                                                                     textColor, NSForegroundColorAttributeName,
+                                                                     //color, NSBackgroundColorAttributeName,
+                                                                     nil];
     
-    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys: font, NSFontAttributeName, color, NSForegroundColorAttributeName, nil];
-    
-    // Draw
+    // Draw    
     NSRect smallerRect = NSMakeRect(1, 0, rect.size.width-1, rect.size.height-1);
     [text drawInRect:smallerRect withAttributes:attr];
+}
+
+- (void)setFont
+{
+    // Get the font right
+    font = [NSFont menuBarFontOfSize: 14];
+    font = [[NSFontManager sharedFontManager] convertFont:font toHaveTrait:NSBoldFontMask];
+}
+
+- (double)computeLength
+{
+    NSMutableDictionary * fontAttributes = [[NSMutableDictionary alloc] init];
+    [fontAttributes setObject:font forKey:NSFontAttributeName];
+    CGSize boundingBox = [text sizeWithAttributes:fontAttributes];
+    //NSLog(@"Clock Size: %.0f %.0f", boundingBox.width, boundingBox.height);
+    return boundingBox.width+2;
 }
 
 - (void)dealloc
