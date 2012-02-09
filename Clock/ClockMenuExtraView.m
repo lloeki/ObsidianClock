@@ -27,6 +27,8 @@
     
     // Get the font right
     NSFont *font = [NSFont menuBarFontOfSize: 14];
+    font = [[NSFontManager sharedFontManager] convertFont:font toHaveTrait:NSBoldFontMask];
+    
     NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys: font, NSFontAttributeName, color, NSForegroundColorAttributeName, nil];
     
     // Draw

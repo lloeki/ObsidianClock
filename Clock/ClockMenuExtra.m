@@ -19,10 +19,7 @@
         return nil;
     
     // seems about nice for...
-    //[self setLength: 42]; // HH:mm
-    //[self setLength: 64]; // HH:mm:ss
-    [self setLength: 72]; // EEE HH:mm
-    //[self setLength: 96]; // EEE HH:mm:ss
+    [self setLength: 76]; // EEE HH:mm
     
     // create and set the MenuExtraView
     theView = [[ClockMenuExtraView alloc] initWithFrame: [[self view] frame]
