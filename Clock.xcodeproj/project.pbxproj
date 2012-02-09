@@ -131,6 +131,9 @@
 /* Begin PBXProject section */
 		E06E1D3B13CAE56D00BF883B /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = E06E1D3E13CAE56D00BF883B /* Build configuration list for PBXProject "Clock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -231,6 +234,7 @@
 				INFOPLIST_FILE = "Clock/Clock-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = menu;
 			};
 			name = Debug;
@@ -251,6 +255,7 @@
 				INFOPLIST_FILE = "Clock/Clock-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = menu;
 			};
 			name = Release;
@@ -274,6 +279,7 @@
 				E06E1D5413CAE56E00BF883B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
