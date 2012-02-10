@@ -19,7 +19,7 @@
         return nil;
     
     // seems about nice
-    [self setLength: 75];
+    [self setLength: 76];
     
     // create and set the MenuExtraView
     theView = [[ClockMenuExtraView alloc] initWithFrame: [[self view] frame]
