@@ -19,7 +19,7 @@
         return nil;
     
     // seems about nice
-    [self setLength: 76];
+    [self setLength: 80];
     
     // create and set the MenuExtraView
     theView = [[ClockMenuExtraView alloc] initWithFrame: [[self view] frame]
@@ -86,7 +86,6 @@
 - (void)refreshClock:(NSTimer*)timer
 {    
     NSDate *now = [NSDate date];
-    [self setLength: [theView computeLength]];
     
     [theView setText: [menuBarFormatter stringFromDate: now]];
     [theClockMenuItem setTitle:[menuItemFormatter stringFromDate: now]];

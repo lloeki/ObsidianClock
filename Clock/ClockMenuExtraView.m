@@ -57,15 +57,6 @@
     font = [[NSFontManager sharedFontManager] convertFont:font toHaveTrait:NSBoldFontMask];
 }
 
-- (double)computeLength
-{
-    NSMutableDictionary * fontAttributes = [[NSMutableDictionary alloc] init];
-    [fontAttributes setObject:font forKey:NSFontAttributeName];
-    CGSize boundingBox = [text sizeWithAttributes:fontAttributes];
-    //NSLog(@"Clock Size: %.0f %.0f", boundingBox.width, boundingBox.height);
-    return boundingBox.width+2;
-}
-
 - (void)dealloc
 {
     [text dealloc];

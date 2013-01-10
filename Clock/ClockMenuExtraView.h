@@ -17,5 +17,4 @@
 }
 @property(readwrite, copy) NSString* text;
 -(void)setFont;
--(double)computeLength;
 @end
