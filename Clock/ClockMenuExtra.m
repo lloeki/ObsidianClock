@@ -44,7 +44,7 @@
     
     // refresh now, then every once in a while
     [self refreshClock: nil];
-    refreshInterval = 1;
+    refreshInterval = 15;
     [self setTimer];
     
     return self;
