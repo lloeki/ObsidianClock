@@ -54,7 +54,9 @@
 {
     // Get the font right
     font = [NSFont menuBarFontOfSize: 14];
-    font = [[NSFontManager sharedFontManager] convertFont:font toHaveTrait:NSBoldFontMask];
+    // Making it bold crashes?
+    //font = [[NSFontManager sharedFontManager] convertWeight:YES ofFont:font];
+    //font = [[NSFontManager sharedFontManager] convertFont:font toHaveTrait:NSBoldFontMask];
 }
 
 - (void)dealloc
