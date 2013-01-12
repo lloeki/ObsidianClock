@@ -14,103 +14,103 @@
 
 - (id)initWithBundle:(NSBundle *)bundle
 {
-    self = [super initWithBundle: bundle];
+    self = [super initWithBundle:bundle];
     if (self == nil)
         return nil;
-    
-    // seems about nice
-    [self setLength: 80];
-    
-    // create and set the MenuExtraView
-    theView = [[ClockMenuExtraView alloc] initWithFrame: [[self view] frame]
-                                          menuExtra:     self];
-    [self setView: theView];
-    [theView setFont];
-    
-    // build the menu
-    theMenu = [[NSMenu alloc] initWithTitle: @"Clock"];
-    [theMenu setAutoenablesItems: NO];
-    theClockMenuItem = [theMenu addItemWithTitle: @""
-                                action:           nil
-                                keyEquivalent:    @""];
-    [theClockMenuItem setEnabled: false];
-    [theMenu addItem: [NSMenuItem separatorItem]];
-    [theMenu addItemWithTitle: @"Date & Time Preferences..."
-             action:           nil
-             keyEquivalent:    @""];
-    
-    // set up formats
-    [self setFormats];
-    
+
+    clockMenuExtraView = [[ClockMenuExtraView alloc] initWithFrame:NSMakeRect(0, 0, 24, 24)
+                                                         menuExtra:self];
+    [clockMenuExtraView retain];
+    [self initMenu];
+    [self setView:clockMenuExtraView];
+
     // refresh now, then every once in a while
-    [self refreshClock: nil];
-    refreshInterval = 15;
+    [self refreshClock:nil];
+    refreshInterval = 1;
     [self setTimer];
-    
+
     return self;
+}
+
+- (void)initMenu
+{
+    menu = [[NSMenu alloc] initWithTitle:@"Clock"];
+    [menu setAutoenablesItems:NO];
+    clockMenuItem = [menu addItemWithTitle:@""
+                                    action:nil
+                             keyEquivalent:@""];
+    [clockMenuItem setEnabled:false];
+    [menu addItem: [NSMenuItem separatorItem]];
+    [menu addItemWithTitle:@"Open Date & Time Preferences..."
+                    action:nil
+             keyEquivalent:@""];
 }
 
 - (void)setTimer
 {    
     // setup timer
-    theTimer = [NSTimer scheduledTimerWithTimeInterval: refreshInterval
-                                                target: self
-                                              selector: @selector(refreshClock:)
-                                              userInfo: nil
-                                               repeats: YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:refreshInterval
+                                             target:self
+                                           selector:@selector(refreshClock:)
+                                           userInfo:nil
+                                            repeats:YES];
 }
 
-- (void)setFormats
+- (NSDateFormatter *)dateFormatterFromTemplate: (NSString *)template
 {
     NSLocale *currentLocale = [NSLocale currentLocale];
     
-    // menu bar
-    menuBarFormatter = [[NSDateFormatter alloc] init];
-    [menuBarFormatter setTimeZone: [NSTimeZone systemTimeZone]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeZone: [NSTimeZone systemTimeZone]];
     
-    NSString *currentMenuBarFormatString = [NSDateFormatter dateFormatFromTemplate: @"EE HH:mm"
-                                                                           options: 0
-                                                                            locale: currentLocale];
-    menuBarFormatter.dateFormat = currentMenuBarFormatString;
+    NSString *currentMenuBarFormatString = [NSDateFormatter dateFormatFromTemplate:template
+                                                                           options:0
+                                                                            locale:currentLocale];
+    dateFormatter.dateFormat = currentMenuBarFormatString;
+    
+    return dateFormatter;
+}
 
-    // menu item
-    menuItemFormatter = [[NSDateFormatter alloc] init];
-    [menuItemFormatter setTimeZone: [NSTimeZone systemTimeZone]];
-    NSString *currentMenuItemFormatString = [NSDateFormatter dateFormatFromTemplate: @"EEEEdMMMMYYYY"
-                                                                            options: 0
-                                                                             locale: currentLocale];
-    menuItemFormatter.dateFormat = currentMenuItemFormatString;
-    
+- (NSDateFormatter *)dateFormatterForMenuBar
+{
+    return [self dateFormatterFromTemplate:@"EE HH:mm"];
+}
+
+- (NSDateFormatter *)dateFormatterForMenuItem
+{
+    return [self dateFormatterFromTemplate:@"EEEEdMMMMYYYY"];
 }
 
 - (void)refreshClock:(NSTimer*)timer
-{    
+{
     NSDate *now = [NSDate date];
     
-    [theView setText: [menuBarFormatter stringFromDate: now]];
-    [theClockMenuItem setTitle:[menuItemFormatter stringFromDate: now]];
-    [theView setNeedsDisplay: true];
+    NSDateFormatter *menuBarFormatter = [self dateFormatterForMenuBar];
+    [clockMenuExtraView setTitle:[menuBarFormatter stringFromDate:now]];
+    [menuBarFormatter release];
+
+    NSDateFormatter *menuItemFormatter = [self dateFormatterForMenuItem];
+    [clockMenuItem setTitle:[menuItemFormatter stringFromDate:now]];
+    [menuItemFormatter release];
 }
 
 - (NSMenu *)menu
 {
-	return theMenu;
+	return menu;
 }
 
 - (void)willUnload
 {
     NSLog(@"ClockMenuExtra willUnload");
-    [theTimer invalidate];
+    [timer invalidate];
     [super willUnload];
 }
 
 - (void)dealloc
 {
     NSLog(@"ClockMenuExtra dealloc");
-    [menuItemFormatter release];
-    [menuBarFormatter release];
-    [theView release];
-    [theMenu release];
+    [clockMenuExtraView release];
+    [menu release];
     [super dealloc];
 }
 

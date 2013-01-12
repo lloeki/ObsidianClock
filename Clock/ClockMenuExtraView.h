@@ -10,11 +10,13 @@
 #import "NSMenuExtra.h"
 #import "NSMenuExtraView.h"
 
+#define MenuExtraViewPaddingWidth  6
+#define MenuExtraViewPaddingHeight 3
 
 @interface ClockMenuExtraView : NSMenuExtraView {
-    NSString *text;
-    NSFont *font;
+    NSString *title;
 }
-@property(readwrite, copy) NSString* text;
--(void)setFont;
+
+@property(readwrite, copy) NSString *title;
+
 @end

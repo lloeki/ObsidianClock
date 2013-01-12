@@ -12,17 +12,11 @@
 @class ClockMenuExtraView;
 
 @interface ClockMenuExtra : NSMenuExtra {
-    ClockMenuExtraView *theView;
-    NSMenu *theMenu;
-    NSMenuItem *theClockMenuItem;
-    NSTimer *theTimer;
+    ClockMenuExtraView *clockMenuExtraView;
+    NSMenu *menu;
+    NSMenuItem *clockMenuItem;
+    NSTimer *timer;
     NSTimeInterval refreshInterval;
-    NSDateFormatter *menuBarFormatter;
-    NSDateFormatter *menuItemFormatter;
 }
-
-- (void)setTimer;
-- (void)setFormats;
-- (void)refreshClock:(NSTimer*)timer;
 
 @end
