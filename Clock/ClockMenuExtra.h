@@ -17,6 +17,7 @@
     NSMenuItem *clockMenuItem;
     NSTimer *timer;
     NSTimeInterval refreshInterval;
+    NSDictionary *preferences;
 }
 
 @end

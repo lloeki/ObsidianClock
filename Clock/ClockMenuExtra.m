@@ -32,6 +32,24 @@
     return self;
 }
 
+- (void)readPreferences
+{
+    // TODO: watch the plist for changes
+    // for now, read once and be done with it
+    // as polling every second is just bad
+    if (preferences != nil) {
+        return;
+    }
+
+    NSString* plistPath = @"/Users/lloeki/Library/Preferences/com.apple.menuextra.clock.plist";
+    NSDictionary *newPreferences = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    [newPreferences retain];
+    if (preferences != nil) {
+        [preferences release];
+    }
+    preferences = newPreferences;
+}
+
 - (void)initMenu
 {
     menu = [[NSMenu alloc] initWithTitle:@"Clock"];
@@ -57,6 +75,17 @@
                                             repeats:YES];
 }
 
+- (NSString *)dateFormatTemplateForMenuBar
+{
+    return [preferences objectForKey:@"DateFormat"];
+}
+
+- (NSString *)dateFormatTemplateForMenuItem
+{
+    // TODO: this format order may depend on locale settings
+    return @"EEEEdMMMMYYYY";
+}
+
 - (NSDateFormatter *)dateFormatterFromTemplate: (NSString *)template
 {
     NSLocale *currentLocale = [NSLocale currentLocale];
@@ -74,25 +103,29 @@
 
 - (NSDateFormatter *)dateFormatterForMenuBar
 {
-    return [self dateFormatterFromTemplate:@"EE HH:mm"];
+    // TODO: memoize
+    return [self dateFormatterFromTemplate:[self dateFormatTemplateForMenuBar]];
 }
 
 - (NSDateFormatter *)dateFormatterForMenuItem
 {
-    return [self dateFormatterFromTemplate:@"EEEEdMMMMYYYY"];
+    // TODO: memoize
+    return [self dateFormatterFromTemplate:[self dateFormatTemplateForMenuItem]];
 }
 
 - (void)refreshClock:(NSTimer*)timer
 {
+    [self readPreferences];
+
     NSDate *now = [NSDate date];
     
     NSDateFormatter *menuBarFormatter = [self dateFormatterForMenuBar];
     [clockMenuExtraView setTitle:[menuBarFormatter stringFromDate:now]];
-    [menuBarFormatter release];
+    [menuBarFormatter release]; // TODO: once memoized, move to dealloc
 
     NSDateFormatter *menuItemFormatter = [self dateFormatterForMenuItem];
     [clockMenuItem setTitle:[menuItemFormatter stringFromDate:now]];
-    [menuItemFormatter release];
+    [menuItemFormatter release]; // TODO: once memoized, move to dealloc
 }
 
 - (NSMenu *)menu
@@ -102,7 +135,6 @@
 
 - (void)openDateAndTimePreferencePane
 {
-    NSLog(@"opening preference pane");
     [[NSWorkspace sharedWorkspace] openFile:@"/System/Library/PreferencePanes/DateAndTime.prefPane"];
 }
 
@@ -117,6 +149,7 @@
 {
     NSLog(@"ClockMenuExtra dealloc");
     [clockMenuExtraView release];
+    [preferences release];
     [menu release];
     [super dealloc];
 }
