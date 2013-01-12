@@ -41,9 +41,10 @@
                              keyEquivalent:@""];
     [clockMenuItem setEnabled:false];
     [menu addItem: [NSMenuItem separatorItem]];
-    [menu addItemWithTitle:@"Open Date & Time Preferences..."
-                    action:nil
-             keyEquivalent:@""];
+    NSMenuItem *item = [menu addItemWithTitle:@"Open Date & Time Preferences..."
+                                       action:@selector(openDateAndTimePreferencePane)
+                                keyEquivalent:@""];
+    [item setTarget:self];
 }
 
 - (void)setTimer
@@ -97,6 +98,12 @@
 - (NSMenu *)menu
 {
 	return menu;
+}
+
+- (void)openDateAndTimePreferencePane
+{
+    NSLog(@"opening preference pane");
+    [[NSWorkspace sharedWorkspace] openFile:@"/System/Library/PreferencePanes/DateAndTime.prefPane"];
 }
 
 - (void)willUnload
