@@ -15,11 +15,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E06E1D4413CAE56E00BF883B /* Clock.menu */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clock.menu; sourceTree = BUILT_PRODUCTS_DIR; };
+		E06E1D4413CAE56E00BF883B /* ObsidianClock.menu */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObsidianClock.menu; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06E1D4713CAE56E00BF883B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		E06E1D4B13CAE56E00BF883B /* Clock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Clock-Info.plist"; sourceTree = "<group>"; };
+		E06E1D4B13CAE56E00BF883B /* ObsidianClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObsidianClock-Info.plist"; sourceTree = "<group>"; };
 		E06E1D4D13CAE56E00BF883B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E06E1D4F13CAE56E00BF883B /* Clock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clock-Prefix.pch"; sourceTree = "<group>"; };
+		E06E1D4F13CAE56E00BF883B /* ObsidianClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObsidianClock-Prefix.pch"; sourceTree = "<group>"; };
 		E06E1D5513CAE7F500BF883B /* ClockMenuExtraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockMenuExtraView.h; sourceTree = "<group>"; };
 		E06E1D5613CAE7F500BF883B /* ClockMenuExtraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockMenuExtraView.m; sourceTree = "<group>"; };
 		E06E1D5913CAE8D700BF883B /* NSMenuExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMenuExtra.h; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		E06E1D4513CAE56E00BF883B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E06E1D4413CAE56E00BF883B /* Clock.menu */,
+				E06E1D4413CAE56E00BF883B /* ObsidianClock.menu */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 		E06E1D4A13CAE56E00BF883B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E06E1D4B13CAE56E00BF883B /* Clock-Info.plist */,
+				E06E1D4B13CAE56E00BF883B /* ObsidianClock-Info.plist */,
 				E06E1D4C13CAE56E00BF883B /* InfoPlist.strings */,
-				E06E1D4F13CAE56E00BF883B /* Clock-Prefix.pch */,
+				E06E1D4F13CAE56E00BF883B /* ObsidianClock-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -109,9 +109,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E06E1D4313CAE56E00BF883B /* Clock */ = {
+		E06E1D4313CAE56E00BF883B /* ObsidianClock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E06E1D5213CAE56E00BF883B /* Build configuration list for PBXNativeTarget "Clock" */;
+			buildConfigurationList = E06E1D5213CAE56E00BF883B /* Build configuration list for PBXNativeTarget "ObsidianClock" */;
 			buildPhases = (
 				E06E1D4013CAE56E00BF883B /* Sources */,
 				E06E1D4113CAE56E00BF883B /* Frameworks */,
@@ -121,9 +121,9 @@
 			);
 			dependencies = (
 			);
-			name = Clock;
+			name = ObsidianClock;
 			productName = Clock;
-			productReference = E06E1D4413CAE56E00BF883B /* Clock.menu */;
+			productReference = E06E1D4413CAE56E00BF883B /* ObsidianClock.menu */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = E06E1D3E13CAE56D00BF883B /* Build configuration list for PBXProject "Clock" */;
+			buildConfigurationList = E06E1D3E13CAE56D00BF883B /* Build configuration list for PBXProject "ObsidianClock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E06E1D4313CAE56E00BF883B /* Clock */,
+				E06E1D4313CAE56E00BF883B /* ObsidianClock */,
 			);
 		};
 /* End PBXProject section */
@@ -230,10 +230,10 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
-				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				GCC_PREFIX_HEADER = "Clock/ObsidianClock-Prefix.pch";
+				INFOPLIST_FILE = "Clock/ObsidianClock-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ObsidianClock;
 				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = menu;
 			};
@@ -251,10 +251,10 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Clock/Clock-Prefix.pch";
-				INFOPLIST_FILE = "Clock/Clock-Info.plist";
+				GCC_PREFIX_HEADER = "Clock/ObsidianClock-Prefix.pch";
+				INFOPLIST_FILE = "Clock/ObsidianClock-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ObsidianClock;
 				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = menu;
 			};
@@ -263,7 +263,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E06E1D3E13CAE56D00BF883B /* Build configuration list for PBXProject "Clock" */ = {
+		E06E1D3E13CAE56D00BF883B /* Build configuration list for PBXProject "ObsidianClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E06E1D5013CAE56E00BF883B /* Debug */,
@@ -272,7 +272,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E06E1D5213CAE56E00BF883B /* Build configuration list for PBXNativeTarget "Clock" */ = {
+		E06E1D5213CAE56E00BF883B /* Build configuration list for PBXNativeTarget "ObsidianClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E06E1D5313CAE56E00BF883B /* Debug */,
